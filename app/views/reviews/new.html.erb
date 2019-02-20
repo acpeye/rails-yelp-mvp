@@ -1,1 +1,15 @@
-new.html.erb
+<div class="container">
+  <div class="form-group col-md-4">
+    <h2>Add New Restaurant</h2>
+    <%= simple_form_for [@restaurant, @review] do |f| %>
+      <%= f.input :content %>
+      <%= f.input :rating %>
+      <%= f.submit "Add Review", class: "btn btn-danger" %>
+    <% end %>
+    <%= link_to restaurant_path(@restaurant) do%>
+      <p class="btn btn-danger" style="margin-top: 20px">Back to Restaurant Info</p>
+    <% end %>
+  </div>
+</div>
+
+

@@ -1,1 +1,10 @@
-new.html.erb
+<div class="form-group col-md-4">
+  <h2>Add New Restaurant</h2>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, collection: %w(chinese italian japanese french belgian) %>
+    <%= f.submit "Add Restaurant", class: "btn btn-danger" %>
+  <% end %>
+</div>

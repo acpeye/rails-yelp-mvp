@@ -11,7 +11,7 @@ Restaurant.destroy_all
 #   Character.create(name: 'Luke', movie: movies.first)
 
 10.times do
-  Restaurant.new({
+  Restaurant.create({
     name: Faker::TvShows::RickAndMorty.location,
     address: Faker::Address.street_address,
     phone_number: Faker::PhoneNumber.cell_phone,

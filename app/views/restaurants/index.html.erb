@@ -1,1 +1,19 @@
-<h1>Index</h1>
+<div class="container">
+  <h1>Index</h1>
+  <%= link_to new_restaurant_path do%>
+    <p class="btn btn-primary">Add New Restaurant</p>
+  <% end %>
+  <div class="container">
+    <h3>Restaurants</h3>
+    <div class="row">
+      <% @restaurants.each do |restaurant| %>
+        <div class="col-md-4">
+          <h3><%= link_to restaurant.name, restaurant_path(restaurant) %></h3>
+          <p> Address: <%= restaurant.address %></p>
+          <p> Tel: <%= restaurant.phone_number %></p>
+          <p> Style: <%= restaurant.category.capitalize %></p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
